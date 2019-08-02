@@ -1,4 +1,4 @@
-FROM alpine:3.9
+FROM balenalib/%%BALENA_MACHINE_NAME%%-alpine:latest
 ENTRYPOINT ["/bin/logspout"]
 VOLUME /mnt/routes
 EXPOSE 80

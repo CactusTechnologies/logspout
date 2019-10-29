@@ -1,0 +1,7 @@
+FROM balenalib/armv7hf-alpine
+
+COPY . /src
+
+RUN [ "cross-build-start" ]
+RUN cd /src && ./build-hello.sh "$(cat VERSION)"
+RUN [ "cross-build-end" ]

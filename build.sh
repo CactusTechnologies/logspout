@@ -7,8 +7,9 @@ cd /go/src/github.com/gliderlabs/logspout
 echo "Architecture"
 uname -a 
 export GOPATH=/go
-go get github.com/Masterminds/glide
-echo "Installed glide package, now using to install dependencies..."
+
+# go get github.com/Masterminds/glide
+# echo "Installed glide package, now using to install dependencies..."
 $GOPATH/bin/glide install
 echo "Glide finished installing...let's build something"
 go build -ldflags "-X main.Version=$1" -o /bin/logspout

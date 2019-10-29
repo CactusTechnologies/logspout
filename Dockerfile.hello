@@ -1,0 +1,8 @@
+FROM alpine:latest
+
+COPY . /src
+
+RUN cd /src && ./build-hello.sh "$(cat VERSION)"
+
+
+

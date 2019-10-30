@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:latest
 ENTRYPOINT ["/bin/logspout"]
 VOLUME /mnt/routes
 # EXPOSE 80
